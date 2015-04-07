@@ -13,27 +13,35 @@ This is the decoupled back-end built using.  It will be used for its routing ser
 ##Routes:
 
 **GET /fruits**
+
 Returns all fruits
 
 **GET /fruits/seasons**
+
 Returns list of all seasons (i.e. Spring, Summer, Fall, Winter)
 
 **GET /fruits/seasons/:season_name**
+
 Returns a list of fruits in season for the specified :season_name
 
 **GET /fruits/categories**
+
 Returns all fruit categories
 
 **GET /fruits/categories/:category_name**
+
 Returns all fruits per the category_name
 
 **GET /fruits/categories/:category_name/:fruit_name**
+
 Returns the specified fruit information
 
 **GET /users**
+
 Returns all users
 
 **GET /users/:user_id**
+
 Returns a user's list of fruits
 
 

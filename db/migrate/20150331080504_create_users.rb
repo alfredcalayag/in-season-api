@@ -5,7 +5,6 @@ class CreateUsers < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :location
-      t.references :favorite, index: true
 
       t.timestamps
     end

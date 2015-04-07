@@ -11,21 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150403013332) do
+ActiveRecord::Schema.define(version: 20150407050630) do
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "fruit_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "favorites", ["fruit_id"], name: "index_favorites_on_fruit_id"
+  add_index "favorites", ["user_id"], name: "index_favorites_on_user_id"
 
   create_table "fruits", force: :cascade do |t|
-    t.string   "fruit_name"
-    t.text     "fruit_description"
-    t.string   "category"
-    t.string   "season"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "fruit_name"
+    t.text   "fruit_description"
+    t.string "category"
+    t.string "season"
   end
 
   create_table "seasons", force: :cascade do |t|
-    t.string   "season_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string "season_name"
   end
 
   create_table "users", force: :cascade do |t|
@@ -33,11 +39,8 @@ ActiveRecord::Schema.define(version: 20150403013332) do
     t.string   "last_name"
     t.string   "email"
     t.string   "location"
-    t.integer  "favorite_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "users", ["favorite_id"], name: "index_users_on_favorite_id"
 
 end

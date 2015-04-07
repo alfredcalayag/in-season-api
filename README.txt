@@ -40,9 +40,12 @@ Schema:
 - There are many users
 - There are many fruits
 
-- A user has many fruits
+- A user has many fruits through favorites
 - A user has a location
 - A user has an email address
+
+- A favorite has a user_id and a fruit_id
+
 
 - A fruit belongs to a fruit_category
 - A fruit belongs to a season

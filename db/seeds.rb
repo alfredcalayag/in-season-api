@@ -13,3 +13,8 @@ User.create(first_name: "John", last_name: "Smith", email: "jsmith@yo.com", loca
 Fruit.create(fruit_name: "Orange", fruit_description: "Round, plump.  Orange in color.", category: "Citrus", season: "Spring")
 
 Fruit.create(fruit_name: "Apple", fruit_description: "Round, Crispy.  Red in color.", category: "Pome", season: "Winter")
+
+Fruit.create(fruit_name: "Pear", fruit_description: "Light.  Crisp and Soft.", category: "Pome", season: "Summer")
+
+
+Favorite.create(user_id: 1, fruit_id: 2)

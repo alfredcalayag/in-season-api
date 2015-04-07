@@ -5,8 +5,6 @@ class CreateFruits < ActiveRecord::Migration
       t.text :fruit_description
       t.string :category
       t.string :season
-
-      t.timestamps
     end
   end
 end

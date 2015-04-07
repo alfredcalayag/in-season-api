@@ -44,11 +44,13 @@ Schema:
 - A user has a location
 - A user has an email address
 
-- A fruit belongs to a category
+- A fruit belongs to a fruit_category
 - A fruit belongs to a season
 - A fruit has nutritional facts
 
+- A season has many fruits
 
+- A fruit_category has many fruits
 
 Routing:
 

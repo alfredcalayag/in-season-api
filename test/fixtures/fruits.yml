@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  fruit_name: MyString
+  fruit_description: MyText
+  fruit_category_id: 
+  season_id: 
+
+two:
+  fruit_name: MyString
+  fruit_description: MyText
+  fruit_category_id: 
+  season_id: 

@@ -14,6 +14,21 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
+  # Users.  Allow full CRUD.
+  resources :users
+
+  namespace :users do
+    resources :fruits
+  end
+
+  # Fruits.  Read only.
+  resources :fruits, :only => [:index, :show]
+
+  namespace :fruits do
+    resources :seasons, :only => [:index, :show]
+    resources :categories, :only => [:index, :show]
+  end
+
   # Example resource route with options:
   #   resources :products do
   #     member do
